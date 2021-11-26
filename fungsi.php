@@ -98,16 +98,18 @@ $nim = htmlspecialchars($data["nim"]);
 $judul = htmlspecialchars($data["judul"]);
 $isbn = htmlspecialchars($data["isbn"]);
 $penulisbuku = htmlspecialchars($data["pengarang"]);
-$kategori = htmlspecialchars($data["kategori"]);
+$jumlah =  $data["jumlah"];
+
 $status = "Dipinjam";
 
 $query = "INSERT INTO peminjaman VALUES ('', '$nama', '$nim', '$judul', '$penulisbuku', '$isbn', '$status') ";
 
-
 mysqli_query($konek, $query);
 
+$jumlah=$jumlah-1;
+
 $querydatabuku = "UPDATE databuku SET 
-				tersedia = '$status'
+				tersedia = '$jumlah'
 				WHERE isbn = $isbn ";
 mysqli_query($konek, $querydatabuku);
 
@@ -122,12 +124,14 @@ global $konek;
 
 //$isbn = htmlspecialchars($data["isbn"]);
 $statuspeminjaman = "Sudah dikembalikan";
-$sedia = "Ya";
+// $sedia = "Ya";
+$jumlah =  $data["jumlah"];
+$jumlah=$jumlah+1;
 
-$querypeminjaman = "UPDATE peminjaman SET status = '$statuspeminjaman' WHERE isbnbuku = $data ";
+$querypeminjaman = "UPDATE peminjaman SET statuss = '$statuspeminjaman' WHERE isbnbuku = $data ";
 mysqli_query($konek, $querypeminjaman);
 
-$querypeminjaman = "UPDATE databuku SET tersedia = '$sedia' WHERE isbn = $data ";
+$querypeminjaman = "UPDATE databuku SET tersedia = '$jumlah' WHERE isbn = $data ";
 mysqli_query($konek, $querypeminjaman);
 
 return mysqli_affected_rows($konek);
