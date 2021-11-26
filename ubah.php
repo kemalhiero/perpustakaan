@@ -66,6 +66,10 @@ if( isset($_POST["submit"]) ) {
 			<label for="penerbit">Penerbit : </label>
 			<input type="text" name="penerbit" id="penerbit" required value="<?= $data["penerbit"]; ?>"><br><br>
 
+			<label for="jumlah">Jumlah :</label>
+			<input type="number" name="jumlah" id="jumlah" required>
+			<br><br>
+
 			<p style="display: inline;">Kategori : </p>
 			<input type="radio" id="kategori" name="kategori" value="fiksi" >
 			<label for="kategori">Fiksi</label>

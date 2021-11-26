@@ -61,6 +61,10 @@ if( isset($_POST["submit"]) ) {
 				<input type="text" name="penerbit" id="penerbit" required>
 				<br><br>
 
+				<label for="jumlah">Jumlah :</label>
+				<input type="number" name="jumlah" id="jumlah" required>
+				<br><br>
+
 				<!-- <label for="kategori">Kategori :</label>
 				<input type="text" name="kategori" id="kategori" required>
 				<br><br> -->

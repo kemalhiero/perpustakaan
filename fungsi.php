@@ -23,8 +23,9 @@ function tambah($data) { //tambah buku
 	$isbn = htmlspecialchars($data["isbn"]);
 	$pengarang = htmlspecialchars($data["pengarang"]);
 	$penerbit = htmlspecialchars($data["penerbit"]);	
+	$jumlah = $data["jumlah"];
 	$kategori = $data["kategori"];
-	$sedia = "Ya";
+	//$sedia = "Ya";
 
 	$result = mysqli_query($konek, "SELECT * FROM databuku WHERE judul = '$judul' OR isbn = '$isbn'");
 
@@ -35,7 +36,7 @@ function tambah($data) { //tambah buku
 		return false;
 	}
 
-	$query = "INSERT INTO databuku	VALUES ('', '$judul', '$isbn', '$pengarang', '$penerbit', '$kategori', '$sedia') ";
+	$query = "INSERT INTO databuku	VALUES ('', '$judul', '$isbn', '$pengarang', '$penerbit', '$kategori', '$jumlah') ";
 	
 	mysqli_query($konek, $query);
 
@@ -52,7 +53,8 @@ function ubah($data) { //ubah data buku
 	$judul = htmlspecialchars($data["judul"]);
 	$isbn = htmlspecialchars($data["isbn"]);
 	$pengarang = htmlspecialchars($data["pengarang"]);
-	$penerbit = htmlspecialchars($data["penerbit"]);	
+	$penerbit = htmlspecialchars($data["penerbit"]);
+	$jumlah = $data["jumlah"];	
 	$kategori = $data["kategori"];
 
 
@@ -61,7 +63,8 @@ function ubah($data) { //ubah data buku
 				isbn = '$isbn',
 				pengarang = '$pengarang',
 				penerbit = '$penerbit',
-				kategori = '$kategori'
+				kategori = '$kategori',
+				tersedia = '$jumlah'
 				WHERE id = $id ";
 	
 	mysqli_query($konek, $query);

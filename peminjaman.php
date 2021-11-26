@@ -38,6 +38,7 @@ $datapeminjam = query("SELECT * FROM peminjaman");
 			<th>Penulis</th>
 			<th>ISBN</th>
 			<th>Status</th>
+			<th>Aksi</th>
 		</tr>
 
 		<?php $nomor=1; ?>
@@ -52,6 +53,9 @@ $datapeminjam = query("SELECT * FROM peminjaman");
 			<td><?= $data["penulisbuku"]; ?></td>
 			<td><?= $data["isbnbuku"]; ?></td>
 			<td><?= $data["status"]; ?></td>
+			<td>
+				<a href="kembali.php?isbnbuku=<?= $data["isbnbuku"]; ?>">kembalikan</a>
+			</td>
 
 		</tr>
 
