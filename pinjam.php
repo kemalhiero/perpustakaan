@@ -55,7 +55,8 @@ if( isset($_POST["submit"]) ) {
 
  	<form action="" method="post" enctype="multipart/form-data">
 
- 		<input type="hidden" name="id" value="<?= $data["id"]; ?>">
+ 		<input type="hidden" name="id" value="<?= $databukumaupinjam["id"]; ?>">
+		<input type="hidden" name="jumlah" value="<?= $databukumaupinjam["tersedia"]; ?>">
  		
  		<label for="peminjam">Nama : </label>
 		<input type="text" name="peminjam" id="peminjam" required>

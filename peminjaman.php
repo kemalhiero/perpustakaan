@@ -52,9 +52,11 @@ $datapeminjam = query("SELECT * FROM peminjaman");
 			<td><?= $data["judulbuku"]; ?></td>
 			<td><?= $data["penulisbuku"]; ?></td>
 			<td><?= $data["isbnbuku"]; ?></td>
-			<td><?= $data["status"]; ?></td>
+			<td><?= $data["statuss"]; ?></td>
 			<td>
-				<a href="kembali.php?isbnbuku=<?= $data["isbnbuku"]; ?>">kembalikan</a>
+			<?php if($data["statuss"]=="Sudah dikembalikan") : ?><a href="#"></a> 
+				<?php else: ?> <a href="kembali.php?isbnbuku=<?= $data["isbnbuku"]; ?>&nim=<?= $data["nim"]; ?>">kembalikan</a>
+				<?php endif; ?>
 			</td>
 
 		</tr>

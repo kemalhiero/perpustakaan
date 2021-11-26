@@ -1,7 +1,13 @@
 <?php 
 require 'fungsi.php';
 
-$isbn = $_GET["isbn"];
+$isbn = $_GET["isbnbuku"];
+
+$databukumaupinjam = query("SELECT tersedia FROM databuku WHERE isbn = $isbn");
+
+echo'<form action="" method="POST">
+  <input type="hidden" name="jumlah" value="<?= $databukumaupinjam; ?>">
+  </form>';
 
 if( kembali($isbn) > 0 ) {
 	echo "
@@ -18,5 +24,4 @@ if( kembali($isbn) > 0 ) {
 		</script>
 	";
 }
-
  ?>

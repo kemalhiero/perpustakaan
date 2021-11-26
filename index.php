@@ -73,8 +73,8 @@ if( isset($_POST["cari"]) ) {
  			<td>
 				<a href="ubah.php?id=<?= $data["id"]; ?>">ubah</a> |
 				<a href="hapus.php?id=<?= $data["id"]; ?>" onclick="return confirm('yakin?');">hapus</a> |
-				<?php if($data["tersedia"]=="Ya") : ?>	<a href="pinjam.php?id=<?= $data["id"]; ?>">pinjam</a> 
-				<?php else: ?> <a href="kembali.php?isbn=<?= $data["isbn"]; ?>">kembalikan</a>
+				<?php if($data["tersedia"]>0) : ?>	<a href="pinjam.php?id=<?= $data["id"]; ?>">pinjam</a> 
+				<?php else: ?> <a href="peminjaman.php">kembalikan</a>
 				<?php endif; ?>
 			</td>
  		</tr>
