@@ -40,6 +40,9 @@ if( isset($_POST["login"]) ) {
  <html>
  <head>
  	<title>Login</title>
+	 <style>
+		 body{background-color: linen;}
+	 </style>
  </head>
  <body>
 <center>
@@ -49,7 +52,7 @@ if( isset($_POST["login"]) ) {
 <p>Masukkan username dan password</p>
 
 <form action="" method="post">
-	<ul>
+	
 	<label for="username">Username : </label>
 	<input type="text" name="username" id="username" required><br><br>
 
@@ -57,7 +60,7 @@ if( isset($_POST["login"]) ) {
 	<input type="password" name="password" id="password" required><br><br>
 
 	<button type="submit" name="login">Masuk</button>	
-	</ul>
+	
 </form>
 
 </center>

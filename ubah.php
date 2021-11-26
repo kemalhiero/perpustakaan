@@ -42,6 +42,10 @@ if( isset($_POST["submit"]) ) {
  <html>
  <head>
  	<title>Ubah Data Buku</title>
+	 <style>
+		 body{background-color: linen}
+
+	 </style>
  </head>
  <body>
 

@@ -23,10 +23,10 @@ $datapeminjam = query("SELECT * FROM peminjaman");
 
 	<center>	
 
-<h1>Peminjaman</h1>
+<h1>Riwayat Peminjaman</h1><br>
 
 
-	<h3>Riwayat Peminjaman</h3>
+	<!-- <h3>Riwayat Peminjaman</h3> -->
 
 	<table border="1" cellpadding="10" cellspacing="0">
 		
@@ -37,6 +37,7 @@ $datapeminjam = query("SELECT * FROM peminjaman");
 			<th>Judul Buku</th>
 			<th>Penulis</th>
 			<th>ISBN</th>
+			<th>Waktu Peminjaman</th>
 			<th>Status</th>
 			<th>Aksi</th>
 		</tr>
@@ -52,6 +53,7 @@ $datapeminjam = query("SELECT * FROM peminjaman");
 			<td><?= $data["judulbuku"]; ?></td>
 			<td><?= $data["penulisbuku"]; ?></td>
 			<td><?= $data["isbnbuku"]; ?></td>
+			<td><?= $data["waktu"]; ?></td>
 			<td><?= $data["statuss"]; ?></td>
 			<td>
 			<?php if($data["statuss"]=="Sudah dikembalikan") : ?><a href="#"></a> 

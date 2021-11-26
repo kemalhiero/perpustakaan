@@ -2,26 +2,26 @@
 require 'fungsi.php';
 
 $isbn = $_GET["isbnbuku"];
+$nim = $_GET["nim"];
 
-$databukumaupinjam = query("SELECT tersedia FROM databuku WHERE isbn = $isbn");
+$jumlah = query("SELECT * FROM databuku WHERE isbn = $isbn")[0];
 
-echo'<form action="" method="POST">
-  <input type="hidden" name="jumlah" value="<?= $databukumaupinjam; ?>">
-  </form>';
+$jumlaa = $jumlah["tersedia"];
 
-if( kembali($isbn) > 0 ) {
-	echo "
-		<script>
-			alert('Buku berhasil dikembalikan!!');
-			document.location.href = 'index.php';
-		</script>
-	";
-} else {
-	echo "
-		<script>
-			alert('Buku gagal dikembalikan!');
-			document.location.href = 'index.php';
-		</script>
-	";
-}
+	if( kembali($isbn, $nim, $jumlaa) > 0 ) {
+		echo "
+			<script>
+				alert('Buku berhasil dikembalikan!!');
+				document.location.href = 'index.php';
+			</script>
+		";
+	} else {
+		echo "
+			<script>
+				alert('Buku gagal dikembalikan!');
+				document.location.href = 'index.php';
+			</script>
+		";
+	}
+
  ?>

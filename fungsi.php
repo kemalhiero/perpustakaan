@@ -119,20 +119,20 @@ return mysqli_affected_rows($konek);
 
 
 
-function kembali($data) {
+function kembali($data, $nim, $jumla) {
 global $konek;
 
 //$isbn = htmlspecialchars($data["isbn"]);
 $statuspeminjaman = "Sudah dikembalikan";
 // $sedia = "Ya";
-$jumlah =  $data["jumlah"];
-$jumlah=$jumlah+1;
 
-$querypeminjaman = "UPDATE peminjaman SET statuss = '$statuspeminjaman' WHERE isbnbuku = $data ";
+$querypeminjaman = "UPDATE peminjaman SET statuss = '$statuspeminjaman' WHERE isbnbuku = $data AND nim = $nim";
 mysqli_query($konek, $querypeminjaman);
 
-$querypeminjaman = "UPDATE databuku SET tersedia = '$jumlah' WHERE isbn = $data ";
-mysqli_query($konek, $querypeminjaman);
+$jumla++;
+
+$queryy = "UPDATE databuku SET tersedia = '$jumla' WHERE isbn = $data ";
+mysqli_query($konek, $queryy);
 
 return mysqli_affected_rows($konek);
 }

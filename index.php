@@ -23,29 +23,34 @@ if( isset($_POST["cari"]) ) {
  <html>
  <head>
  	<title>Beranda</title>
+	 <style>
+		body{background-color: linen}
+		form{position: relative;  left: 108px;}
+		.riwayat{position: relative;  right: 108px; bottom:20px;}
+	 </style>
  </head>
  <body>
  	<a href="logout.php">Logout</a>
  
- 	<h1>Sistem Informasi Perpustakaan</h1>
+	 <div style="float: right;"><a href="tambah.php">Tambah Buku</a></div><br>
 
- 	<span><a style="text-align: left;" href="tambah.php">Tambah Buku</a></span>
- 	<span>                </span>
- 	<span><a style="text-align: right;" href="peminjaman.php">Riwayat Peminjaman Buku</a></span>
- 	 
- 	 	<br>
+	 <center>	<h1>Sistem Informasi Perpustakaan</h1> </center>
+ 
+ 	 	<br><br>
 
- 	 <h3>Data Buku</h3>
+ 	 <!-- <h3>Data Buku</h3> -->
 
+	
  	 <!-- cari -->
  	 <form action="" method="post">
-
 		<input type="text" name="keyword" size="40" autofocus placeholder="masukkan kata kunci" autocomplete="off">
 		<button type="submit" name="cari">Cari</button>		
 	</form>
 
-	<br>
+	<div class="riwayat" style="float: right;"><a href="peminjaman.php">Riwayat Peminjaman Buku</a></div>
 
+	<br>
+	<center>
  	<table border="1" cellpadding="10" cellspacing="0">
  		<tr>
  			<th>No.</th>
@@ -83,6 +88,9 @@ if( isset($_POST["cari"]) ) {
  		<?php endforeach; ?>
 
  	</table>
-
+	 </center>
+	 <br>
+	
+	
  </body>
  </html>
