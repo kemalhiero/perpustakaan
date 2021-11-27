@@ -100,9 +100,12 @@ $isbn = htmlspecialchars($data["isbn"]);
 $penulisbuku = htmlspecialchars($data["pengarang"]);
 $jumlah =  $data["jumlah"];
 
+date_default_timezone_set("Asia/Jakarta");
+$waktu = date("Y/m/d H:i:s");
+
 $status = "Dipinjam";
 
-$query = "INSERT INTO peminjaman VALUES ('', '$nama', '$nim', '$judul', '$penulisbuku', '$isbn', '$status') ";
+$query = "INSERT INTO peminjaman VALUES ('', '$nama', '$nim', '$judul', '$penulisbuku', '$isbn', '$waktu', '$status') ";
 
 mysqli_query($konek, $query);
 

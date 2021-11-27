@@ -17,6 +17,9 @@ $datapeminjam = query("SELECT * FROM peminjaman");
 <html>
 <head>
 	<title>Peminjaman</title>
+	<style>
+		 body{background-color: linen}
+	 </style>
 </head>
 <body>
 	<a href="index.php"><- Kembali</a>

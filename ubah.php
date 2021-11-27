@@ -55,34 +55,51 @@ if( isset($_POST["submit"]) ) {
  		
 	<h2>Silahkan Ubah Data Buku di Sini</h2>
 
-		<form action="" method="post" enctype="multipart/form-data">
+	<form action="" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="id" value="<?= $data["id"]; ?>">
 
-			<label for="judul">Judul : </label>
-			<input type="text" name="judul" id="judul" required value="<?= $data["judul"]; ?>"><br><br>
+		<table border="0" cellpadding="5" cellspacing="0">
+				
+				<tr>
+					<td><label for="judul">Judul : </label></td>
+					<td><input type="text" name="judul" id="judul" required value="<?= $data["judul"]; ?>"></td>
+				</tr>
 
-			<label for="isbn">ISBN : </label>
-			<input type="text" name="isbn" id="isbn" required value="<?= $data["isbn"]; ?>"><br><br>
+				<tr>
+					<td><label for="isbn">ISBN : </label></td>
+					<td><input type="text" name="isbn" id="isbn" required value="<?= $data["isbn"]; ?>"></td>
+				</tr>
 
-			<label for="pengarang">Pengarang : </label>
-			<input type="text" name="pengarang" id="pengarang" required value="<?= $data["pengarang"]; ?>"><br><br>
+				<tr>
+					<td><label for="pengarang">Pengarang : </label></td>
+					<td><input type="text" name="pengarang" id="pengarang" required value="<?= $data["pengarang"]; ?>"></td>
+				</tr>
 
-			<label for="penerbit">Penerbit : </label>
-			<input type="text" name="penerbit" id="penerbit" required value="<?= $data["penerbit"]; ?>"><br><br>
+				<tr>
+					<td><label for="penerbit">Penerbit : </label></td>
+					<td><input type="text" name="penerbit" id="penerbit" required value="<?= $data["penerbit"]; ?>"></td>
+				</tr>
 
-			<label for="jumlah">Jumlah :</label>
-			<input type="number" name="jumlah" id="jumlah" required>
-			<br><br>
+				<tr>
+					<td><label for="jumlah">Jumlah :</label></td>
+					<td><input type="number" name="jumlah" id="jumlah" required></td>
+				</tr>
 
-			<p style="display: inline;">Kategori : </p>
-			<input type="radio" id="kategori" name="kategori" value="fiksi" >
-			<label for="kategori">Fiksi</label>
-			<input type="radio" id="kategori" name="kategori" value="nonfiksi" required>
-			<label for="kategori">Non-Fiksi</label><br><br>
+				<tr>
+					<td><p style="display: inline;">Kategori : </p></td>
+					<td>
+						<input type="radio" id="kategori" name="kategori" value="fiksi" >
+						<label for="kategori">Fiksi</label>
+						<input type="radio" id="kategori" name="kategori" value="nonfiksi" required>
+						<label for="kategori">Non-Fiksi</label>
+					</td>
+				</tr>
+
+		</table>
 			
 			<button type="submit" name="submit">Ubah Data Buku</button>
 
-		</form>
+	</form>
 
  	</center>
 

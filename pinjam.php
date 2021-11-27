@@ -44,6 +44,9 @@ if( isset($_POST["submit"]) ) {
  <html>
  <head>
  	<title>Pinjam Buku</title>
+	 <style>
+		 body{background-color: linen}
+	 </style>
  </head>
  <body>
 
@@ -66,17 +69,28 @@ if( isset($_POST["submit"]) ) {
 		<input type="text" name="nim" id="nim" required>
 		<br><br>
 
-		<p>Buku yang akan dipinjam</p>
+		<h4>Buku yang akan dipinjam</h4>
 
-		<label for="judul">Judul : </label>
-		<input type="text" name="judul" id="judul" readonly value="<?= $databukumaupinjam["judul"]; ?>"><br><br>
+		<table cellpadding="5">
 
-		<label for="pengarang">pengarang : </label>
-		<input type="text" name="pengarang" id="pengarang" readonly value="<?= $databukumaupinjam["pengarang"]; ?>"><br><br>
+			<tr>
+				<td><label for="judul">Judul : </label></td>
+				<td><input type="text" name="judul" id="judul" readonly value="<?= $databukumaupinjam["judul"]; ?>"></td>
+			</tr>
 
-		<label for="isbn">isbn : </label>
-		<input type="text" name="isbn" id="isbn" readonly value="<?= $databukumaupinjam["isbn"]; ?>"><br><br>
+			<tr>
+				<td><label for="pengarang">pengarang : </label></td>
+				<td><input type="text" name="pengarang" id="pengarang" readonly value="<?= $databukumaupinjam["pengarang"]; ?>"></td>
+			</tr>
 
+			<tr>
+				<td><label for="isbn">isbn : </label></td>
+				<td><input type="text" name="isbn" id="isbn" readonly value="<?= $databukumaupinjam["isbn"]; ?>"></td>
+			</tr>
+
+		</table>
+
+		<br>
 
 		<button type="submit" name="submit">Pinjam Buku</button>
 
