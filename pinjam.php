@@ -54,7 +54,7 @@ if( isset($_POST["submit"]) ) {
 
  	<center>
  		
-<h2>Masukkan data peminjam disini!</h2>
+	<h2>Masukkan data peminjam disini!</h2>
 
  	<form action="" method="post" enctype="multipart/form-data">
 
@@ -79,12 +79,12 @@ if( isset($_POST["submit"]) ) {
 			</tr>
 
 			<tr>
-				<td><label for="pengarang">pengarang : </label></td>
+				<td><label for="pengarang">Pengarang : </label></td>
 				<td><input type="text" name="pengarang" id="pengarang" readonly value="<?= $databukumaupinjam["pengarang"]; ?>"></td>
 			</tr>
 
 			<tr>
-				<td><label for="isbn">isbn : </label></td>
+				<td><label for="isbn">ISBN : </label></td>
 				<td><input type="text" name="isbn" id="isbn" readonly value="<?= $databukumaupinjam["isbn"]; ?>"></td>
 			</tr>
 

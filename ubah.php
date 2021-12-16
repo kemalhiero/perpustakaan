@@ -82,11 +82,11 @@ if( isset($_POST["submit"]) ) {
 
 				<tr>
 					<td><label for="jumlah">Jumlah :</label></td>
-					<td><input type="number" name="jumlah" id="jumlah" required></td>
+					<td><input type="number" name="jumlah" id="jumlah" required value="<?= $data["tersedia"]; ?>"></td>
 				</tr>
 
 				<tr>
-					<td><p style="display: inline;">Kategori : </p></td>
+					<td><p>Kategori : </p></td>
 					<td>
 						<input type="radio" id="kategori" name="kategori" value="fiksi" >
 						<label for="kategori">Fiksi</label>

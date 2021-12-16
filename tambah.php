@@ -46,42 +46,57 @@ if( isset($_POST["submit"]) ) {
 <h2>Silahkan tambah buku disini!</h2>
 
  	<form action="" method="post" enctype="multipart/form-data">
-		<ul>
-			
-				<label for="judul">Judul Buku : </label>
-				<input type="text" name="judul" id="judul" required>
-				<br><br>
-			
-				<label for="isbn">ISBN : </label>
-				<input type="text" name="isbn" id="isbn" required>
-				<br><br>
-			
-				<label for="pengarang">Pengarang :</label>
-				<input type="text" name="pengarang" id="pengarang" required>
-				<br><br>
-			
-				<label for="penerbit">Penerbit :</label>
-				<input type="text" name="penerbit" id="penerbit" required>
-				<br><br>
+		
+			<table cellpadding="5">
 
-				<label for="jumlah">Jumlah :</label>
-				<input type="number" name="jumlah" id="jumlah" required>
-				<br><br>
+			<tr>
+				<td><label for="judul">Judul Buku : </label></td>
+				<td><input type="text" name="judul" id="judul" required></td>
+			</tr>
+
+			<tr>
+				<td><label for="isbn">ISBN : </label></td>
+				<td><input type="text" name="isbn" id="isbn" required></td>
+			</tr>
+
+			<tr>
+				<td><label for="pengarang">Pengarang :</label></td>
+				<td><input type="text" name="pengarang" id="pengarang" required></td>
+			</tr>
+
+			<tr>
+				<td><label for="penerbit">Penerbit :</label></td>
+				<td><input type="text" name="penerbit" id="penerbit" required></td>
+			</tr>
+
+			<tr>
+				<td><label for="jumlah">Jumlah :</label></td>
+				<td><input type="number" name="jumlah" id="jumlah" required></td>
+			</tr>
+
+			<tr>
+				<td><p style="display: inline;">Kategori  : </p></td>
+				<td>
+					<input type="radio" id="kategori" name="kategori" value="fiksi" >
+					<label for="kategori">Fiksi</label>
+					<input type="radio" id="kategori" name="kategori" value="nonfiksi" required="">
+					<label for="kategori">Non-Fiksi</label>
+				</td>
+			</tr>
+
+			</table>
+						
 
 				<!-- <label for="kategori">Kategori :</label>
 				<input type="text" name="kategori" id="kategori" required>
 				<br><br> -->
 
-				<p style="display: inline;">Kategori : </p>
-				<input type="radio" id="kategori" name="kategori" value="fiksi" >
-				<label for="kategori">Fiksi</label>
-				<input type="radio" id="kategori" name="kategori" value="nonfiksi" required="">
-				<label for="kategori">Non-Fiksi</label><br>
-				<br><br>
+				
+				<br>
 												
 				<button type="submit" name="submit">Tambah Buku</button>
 			
-		</ul>
+		
 	</form>
 </center>
 

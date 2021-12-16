@@ -39,7 +39,6 @@ if( isset($_POST["cari"]) ) {
  	 	<br><br>
 
  	 <!-- <h3>Data Buku</h3> -->
-
 	
  	 <!-- cari -->
  	 <form action="" method="post">
@@ -77,7 +76,7 @@ if( isset($_POST["cari"]) ) {
  			<td><?= $data["tersedia"]; ?></td>
  			<td>
 				<a href="ubah.php?id=<?= $data["id"]; ?>">ubah</a> |
-				<a href="hapus.php?id=<?= $data["id"]; ?>" onclick="return confirm('yakin?');">hapus</a> |
+				<a href="hapus.php?id=<?= $data["id"]; ?>" onclick="return confirm('Yakin ingin menghapus?');">hapus</a> |
 				<?php if($data["tersedia"]>0) : ?>	<a href="pinjam.php?id=<?= $data["id"]; ?>">pinjam</a> 
 				<?php else: ?> <a href="peminjaman.php">kembalikan</a>
 				<?php endif; ?>
